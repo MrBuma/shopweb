@@ -1,7 +1,9 @@
 :root{
+    --primary-color: rgb(238, 77, 45);
     --white-color: #fff;
-    --black-color: #fff;
+    --black-color: #000;
     --text-color: #333;
+    --border-color: #dbdbdb;
 }
 
 *{
@@ -23,5 +25,47 @@ html{
 }
 
 .grid__full-width {
-
+    width: 100%;
 }
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Style button */
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn-disabled {
+    cursor: default;
+    filter: brightness(80%);
+}
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+}
+
+@keyframes growth {
+    form {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+
